@@ -9,6 +9,7 @@ def get_user_balance(username):
     
     # Error 2: Inyección SQL
     query = "SELECT balance FROM accounts WHERE username = '" + username + "'"
-    cursor.execute(query)
+    cursor.execute("SELECT balance FROM accounts WHERE username = ?", (username,))
     
     return cursor.fetchone()
+# Triggering security scan

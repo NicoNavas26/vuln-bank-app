@@ -12,3 +12,4 @@ def get_user_balance(username):
     cursor.execute(query)
     
     return cursor.fetchone()
+# Triggering security scan
